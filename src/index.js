@@ -31,16 +31,15 @@ requestUrl()
 
 
 
-function requestUrl(data) {
-  return axios
-    .get(`${urlPikabu}/?${KEY}&q=${inputSearch}&image_type=photo&per_page=40`)
-    .then(response => {
+async function requestUrl(data) {
+  try {
+      const response = await axios
+         .get(`${urlPikabu}/?${KEY}&q=${inputSearch}&image_type=photo&per_page=40`);
       console.log(response.data);
-    })
-    .catch(function (error) {
+   } catch (error) {
       // handle error
       console.log(error);
-    });
+   }
 }
 
 
