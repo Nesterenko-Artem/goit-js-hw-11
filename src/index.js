@@ -1,4 +1,9 @@
 const axios = require('axios').default;
+import Notiflix from 'notiflix';
+
+
+
+import createMarkup from '../src/js/markup';
 
 
 const urlPikabu = 'https://pixabay.com/api';
@@ -35,11 +40,13 @@ async function requestUrl(data) {
   try {
       const response = await axios
          .get(`${urlPikabu}/?${KEY}&q=${inputSearch}&image_type=photo&per_page=40`);
-      console.log(response.data);
+      console.log(response.data.hits);
+      
    } catch (error) {
       // handle error
       console.log(error);
    }
+  
 }
 
 
