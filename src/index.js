@@ -13,22 +13,22 @@ const refs = {
   moreBtn: document.querySelector('#load-more'),
   gallery: document.querySelector('.gallery'),
 };
-
+let lightbox;
 const scroll = new OnlyScroll(document.scrollingElement, {
   damping: 0.8,
 });
 // let totalPages = 0;
 const photosAPIServise = new imgApiServise();
 
-const lightbox = new SimpleLightbox('.gallery a', {
-  captionDelay: 250,
-  captionsData: 'alt',
-});
-lightbox.on('show.lightbox');
+
+
 
 const renderGallery = markup => {
   refs.gallery.insertAdjacentHTML('beforeend', markup);
-  
+   lightbox = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+    captionsData: 'alt',
+  });
 };
 
 function onClickSubmit(e) {
