@@ -4,11 +4,11 @@
 }
 
 .gallery.on {
-   margin: 12px auto;
+   margin: 12px 5px;
    display: grid;
    max-width: 100vw;
    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-   grid-gap: 12px;
+   grid-gap: 8px;
    justify-content: center;
    padding: 0;
    list-style: none;
