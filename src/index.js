@@ -21,13 +21,14 @@ const scroll = new OnlyScroll(document.scrollingElement, {
 const photosAPIServise = new imgApiServise();
 
 const lightbox = new SimpleLightbox('.gallery a', {
+  captionDelay: 250,
   captionsData: 'alt',
-  captionDelay: 550,
 });
 lightbox.on('show.lightbox');
 
 const renderGallery = markup => {
   refs.gallery.insertAdjacentHTML('beforeend', markup);
+  
 };
 
 function onClickSubmit(e) {
